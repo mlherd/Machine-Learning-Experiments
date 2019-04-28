@@ -305,7 +305,7 @@ class NeuralNetwork(NeuralNetwork):
         self.all_train_accuracy = []
         self.all_test_accuracy = []
         
-        for j in range(1600):
+        for j in range(self.epoch):
             all_error = []
             for i in range(self.training_inputs.shape[0]):
                 # Forward Propagation with traning data
@@ -355,27 +355,31 @@ class NeuralNetwork(NeuralNetwork):
         self.plot_accuracy()
 ```
 
+## Experiments with Different Learning Rates
+
+## Experiment 1 - Learning Rate = 0.01
+
 
 ```python
 if __name__ == "__main__":
+    #Experiment 1- 
     #experiment parameters
     number_of_inputs = 2
     number_of_hidden_layer_nodes = 5
     number_of_output_layer_nodes = 1
-    number_of_epochs = 5
+    number_of_epochs = 1600
     trainining_data_size = 25
-    batch_size = trainining_data_size
     learning_rate = 0.01
     
     # Create layer 1 (n units, n inputs
-    hidden = Layer(number_of_inputs, number_of_hidden_layer_nodes)
+    hidden1 = Layer(number_of_inputs, number_of_hidden_layer_nodes)
     
     # Create layer 2 (n units, n inputs)
-    output = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
+    output1 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
     
     # Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
     # None = momentum - it is 0 because it is not used in this example
-    neural_network = NeuralNetwork(hidden, output, learning_rate, number_of_epochs, trainining_data_size)
+    neural_network = NeuralNetwork(hidden1, output1, learning_rate, number_of_epochs, trainining_data_size)
 
     # load the traning data
     neural_network.pandas_open()
@@ -385,13 +389,283 @@ if __name__ == "__main__":
 ```
 
 
-![png](output_29_0.png)
+![png](imgplt/output_31_0.png)
 
 
 
-![png](output_29_1.png)
+![png](imgplt/output_31_1.png)
+
+
+## Experiment 2 - Learning Rate = 0.1
+
+
+```python
+#Experiment 2- 
+#experiment parameters
+number_of_inputs = 2
+number_of_hidden_layer_nodes = 5
+number_of_output_layer_nodes = 1
+number_of_epochs = 1600
+trainining_data_size = 25
+learning_rate = 0.1
+
+# Create layer 1 (n units, n inputs
+hidden2 = Layer(number_of_inputs, number_of_hidden_layer_nodes)
+
+# Create layer 2 (n units, n inputs)
+output2 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
+
+# Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
+# None = momentum - it is 0 because it is not used in this example
+neural_network = NeuralNetwork(hidden2, output2, learning_rate, number_of_epochs, trainining_data_size)
+
+# load the traning data
+neural_network.pandas_open()
+
+# Train the neural network using the training set
+neural_network.train()
+```
+
+
+![png](imgplt/output_33_0.png)
+
+
+
+![png](imgplt/output_33_1.png)
+
+
+## Experiment 3 - Learning Rate = 1
+
+
+```python
+#Experiment 3- 
+#experiment parameters
+number_of_inputs = 2
+number_of_hidden_layer_nodes = 5
+number_of_output_layer_nodes = 1
+number_of_epochs = 1600
+trainining_data_size = 25
+learning_rate = 1
+
+# Create layer 1 (n units, n inputs
+hidden3 = Layer(number_of_inputs, number_of_hidden_layer_nodes)
+
+# Create layer 2 (n units, n inputs)
+output3 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
+
+# Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
+# None = momentum - it is 0 because it is not used in this example
+neural_network = NeuralNetwork(hidden3, output3, learning_rate, number_of_epochs, trainining_data_size)
+
+# load the traning data
+neural_network.pandas_open()
+
+# Train the neural network using the training set
+neural_network.train()
+```
+
+
+![png](imgplt/output_35_0.png)
+
+
+
+![png](imgplt/output_35_1.png)
+
+
+## Experiments with Different Number of Neurons in the Hidden Layer
+
+## Experiment 1 - number of hidden layer nodes = 5
+
+
+```python
+#Experiment 1- 
+#experiment parameters
+number_of_inputs = 2
+number_of_hidden_layer_nodes = 5
+number_of_output_layer_nodes = 1
+number_of_epochs = 1600
+trainining_data_size = 25
+learning_rate = 0.01
+
+# Create layer 1 (n units, n inputs
+hidden4 = Layer(number_of_inputs, number_of_hidden_layer_nodes)
+
+# Create layer 2 (n units, n inputs)
+output4 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
+
+# Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
+# None = momentum - it is 0 because it is not used in this example
+neural_network = NeuralNetwork(hidden4, output4, learning_rate, number_of_epochs, trainining_data_size)
+
+# load the traning data
+neural_network.pandas_open()
+
+# Train the neural network using the training set
+neural_network.train()
+```
+
+
+![png](imgplt/output_38_0.png)
+
+
+
+![png](imgplt/output_38_1.png)
+
+
+## Experiment 2 - number of hidden layer nodes = 4
+
+
+```python
+#Experiment 2- 
+#experiment parameters
+number_of_inputs = 2
+number_of_hidden_layer_nodes = 4
+number_of_output_layer_nodes = 1
+number_of_epochs = 1600
+trainining_data_size = 25
+learning_rate = 0.01
+
+# Create layer 1 (n units, n inputs
+hidden5 = Layer(number_of_inputs, number_of_hidden_layer_nodes)
+
+# Create layer 2 (n units, n inputs)
+output5 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
+
+# Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
+# None = momentum - it is 0 because it is not used in this example
+neural_network2 = NeuralNetwork(hidden5, output5, learning_rate, number_of_epochs, trainining_data_size)
+
+# load the traning data
+neural_network2.pandas_open()
+
+# Train the neural network using the training set
+neural_network2.train()
+```
+
+
+![png](imgplt/output_40_0.png)
+
+
+
+![png](imgplt/output_40_1.png)
+
+
+## Experiment 3 - number of hidden layer nodes = 3
+
+
+```python
+#Experiment 3- 
+#experiment parameters
+number_of_inputs = 2
+number_of_hidden_layer_nodes = 3
+number_of_output_layer_nodes = 1
+number_of_epochs = 1600
+trainining_data_size = 25
+learning_rate = 0.01
+
+# Create layer 1 (n units, n inputs
+hidden6 = Layer(number_of_inputs, number_of_hidden_layer_nodes)
+
+# Create layer 2 (n units, n inputs)
+output6 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
+
+# Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
+# None = momentum - it is 0 because it is not used in this example
+neural_network3 = NeuralNetwork(hidden6, output6, learning_rate, number_of_epochs, trainining_data_size)
+
+# load the traning data
+neural_network3.pandas_open()
+
+# Train the neural network using the training set
+neural_network3.train()
+```
+
+
+![png](imgplt/output_42_0.png)
+
+
+
+![png](imgplt/output_42_1.png)
+
+
+## Experiment 4 - number of hidden layer nodes = 2
+
+
+```python
+#Experiment 4- 
+#experiment parameters
+number_of_inputs = 2
+number_of_hidden_layer_nodes = 2
+number_of_output_layer_nodes = 1
+number_of_epochs = 1600
+trainining_data_size = 25
+learning_rate = 0.01
+
+# Create layer 1 (n units, n inputs
+hidden7 = Layer(number_of_inputs, number_of_hidden_layer_nodes)
+
+# Create layer 2 (n units, n inputs)
+output7 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
+
+# Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
+# None = momentum - it is 0 because it is not used in this example
+neural_network3 = NeuralNetwork(hidden7, output7, learning_rate, number_of_epochs, trainining_data_size)
+
+# load the traning data
+neural_network3.pandas_open()
+
+# Train the neural network using the training set
+neural_network3.train()
+```
+
+
+![png](imgplt/output_44_0.png)
+
+
+
+![png](imgplt/output_44_1.png)
+
+
+## Experiment 5 - number of hidden layer nodes = 1
+
+
+```python
+#Experiment 5- 
+#experiment parameters
+number_of_inputs = 2
+number_of_hidden_layer_nodes = 1
+number_of_output_layer_nodes = 1
+number_of_epochs = 1600
+trainining_data_size = 25
+learning_rate = 0.01
+
+# Create layer 1 (n units, n inputs
+hidden8 = Layer(number_of_inputs, number_of_hidden_layer_nodes)
+
+# Create layer 2 (n units, n inputs)
+output8 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
+
+# Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
+# None = momentum - it is 0 because it is not used in this example
+neural_network3 = NeuralNetwork(hidden8, output8, learning_rate, number_of_epochs, trainining_data_size)
+
+# load the traning data
+neural_network3.pandas_open()
+
+# Train the neural network using the training set
+neural_network3.train()
+```
+
+
+![png](imgplt/output_46_0.png)
+
+
+
+![png](imgplt/output_46_1.png)
 
 
 References
+- http://web.cecs.pdx.edu/~mm/MachineLearningWinter2019/NNs.pdf
 - https://cs.anu.edu.au/courses/CSPROJECTS/17S2/reports/u5934839.pdf
 - https://www.ini.rub.de/PEOPLE/wiskott/Teaching/Material/Backpropagation-LectureNotesPublic.pdf
+- http://web.cecs.pdx.edu/~willke/courses/510/
