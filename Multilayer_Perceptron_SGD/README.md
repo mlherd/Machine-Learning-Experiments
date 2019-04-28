@@ -365,9 +365,7 @@ if __name__ == "__main__":
     #Experiment 1- 
     #experiment parameters
     number_of_inputs = 2
-    number_of_hidden_layer_
-    
-    = 5
+    number_of_hidden_layer_nodes = 5
     number_of_output_layer_nodes = 1
     number_of_epochs = 1600
     trainining_data_size = 25
@@ -381,13 +379,13 @@ if __name__ == "__main__":
     
     # Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
     # None = momentum - it is 0 because it is not used in this example
-    neural_network = NeuralNetwork(hidden1, output1, learning_rate, number_of_epochs, trainining_data_size)
+    neural_network1 = NeuralNetwork(hidden1, output1, learning_rate, number_of_epochs, trainining_data_size)
 
     # load the traning data
-    neural_network.pandas_open()
+    neural_network1.pandas_open()
 
     # Train the neural network using the training set
-    neural_network.train()
+    neural_network1.train()
 ```
 
 
@@ -419,13 +417,13 @@ output2 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
 
 # Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
 # None = momentum - it is 0 because it is not used in this example
-neural_network = NeuralNetwork(hidden2, output2, learning_rate, number_of_epochs, trainining_data_size)
+neural_network2 = NeuralNetwork(hidden2, output2, learning_rate, number_of_epochs, trainining_data_size)
 
 # load the traning data
-neural_network.pandas_open()
+neural_network2.pandas_open()
 
 # Train the neural network using the training set
-neural_network.train()
+neural_network2.train()
 ```
 
 
@@ -457,13 +455,13 @@ output3 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
 
 # Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
 # None = momentum - it is 0 because it is not used in this example
-neural_network = NeuralNetwork(hidden3, output3, learning_rate, number_of_epochs, trainining_data_size)
+neural_network3 = NeuralNetwork(hidden3, output3, learning_rate, number_of_epochs, trainining_data_size)
 
 # load the traning data
-neural_network.pandas_open()
+neural_network3.pandas_open()
 
 # Train the neural network using the training set
-neural_network.train()
+neural_network3.train()
 ```
 
 
@@ -497,13 +495,13 @@ output4 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
 
 # Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
 # None = momentum - it is 0 because it is not used in this example
-neural_network = NeuralNetwork(hidden4, output4, learning_rate, number_of_epochs, trainining_data_size)
+neural_network4 = NeuralNetwork(hidden4, output4, learning_rate, number_of_epochs, trainining_data_size)
 
 # load the traning data
-neural_network.pandas_open()
+neural_network4.pandas_open()
 
 # Train the neural network using the training set
-neural_network.train()
+neural_network4.train()
 ```
 
 
@@ -535,13 +533,13 @@ output5 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
 
 # Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
 # None = momentum - it is 0 because it is not used in this example
-neural_network2 = NeuralNetwork(hidden5, output5, learning_rate, number_of_epochs, trainining_data_size)
+neural_network5 = NeuralNetwork(hidden5, output5, learning_rate, number_of_epochs, trainining_data_size)
 
 # load the traning data
-neural_network2.pandas_open()
+neural_network5.pandas_open()
 
 # Train the neural network using the training set
-neural_network2.train()
+neural_network5.train()
 ```
 
 
@@ -573,13 +571,13 @@ output6 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
 
 # Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
 # None = momentum - it is 0 because it is not used in this example
-neural_network3 = NeuralNetwork(hidden6, output6, learning_rate, number_of_epochs, trainining_data_size)
+neural_network6 = NeuralNetwork(hidden6, output6, learning_rate, number_of_epochs, trainining_data_size)
 
 # load the traning data
-neural_network3.pandas_open()
+neural_network6.pandas_open()
 
 # Train the neural network using the training set
-neural_network3.train()
+neural_network6.train()
 ```
 
 
@@ -611,13 +609,13 @@ output7 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
 
 # Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
 # None = momentum - it is 0 because it is not used in this example
-neural_network3 = NeuralNetwork(hidden7, output7, learning_rate, number_of_epochs, trainining_data_size)
+neural_network7 = NeuralNetwork(hidden7, output7, learning_rate, number_of_epochs, trainining_data_size)
 
 # load the traning data
-neural_network3.pandas_open()
+neural_network7.pandas_open()
 
 # Train the neural network using the training set
-neural_network3.train()
+neural_network7.train()
 ```
 
 
@@ -649,13 +647,13 @@ output8 = Layer(number_of_hidden_layer_nodes, number_of_output_layer_nodes)
 
 # Create a Neural Network by Combining the created Layers , 25 is the number of traning examples
 # None = momentum - it is 0 because it is not used in this example
-neural_network3 = NeuralNetwork(hidden8, output8, learning_rate, number_of_epochs, trainining_data_size)
+neural_network8 = NeuralNetwork(hidden8, output8, learning_rate, number_of_epochs, trainining_data_size)
 
 # load the traning data
-neural_network3.pandas_open()
+neural_network8.pandas_open()
 
 # Train the neural network using the training set
-neural_network3.train()
+neural_network8.train()
 ```
 
 
