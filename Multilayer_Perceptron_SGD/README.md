@@ -365,7 +365,9 @@ if __name__ == "__main__":
     #Experiment 1- 
     #experiment parameters
     number_of_inputs = 2
-    number_of_hidden_layer_nodes = 5
+    number_of_hidden_layer_
+    
+    = 5
     number_of_output_layer_nodes = 1
     number_of_epochs = 1600
     trainining_data_size = 25
@@ -474,7 +476,7 @@ neural_network.train()
 
 ## Experiments with Different Number of Neurons in the Hidden Layer
 
-## Experiment 1 - number of hidden layer nodes = 5
+## Experiment 1 - number of hidden layer neurons = 5
 
 
 ```python
@@ -512,7 +514,7 @@ neural_network.train()
 ![png](imgplt/output_38_1.png)
 
 
-## Experiment 2 - number of hidden layer nodes = 4
+## Experiment 2 - number of hidden layer neurons = 4
 
 
 ```python
@@ -550,7 +552,7 @@ neural_network2.train()
 ![png](imgplt/output_40_1.png)
 
 
-## Experiment 3 - number of hidden layer nodes = 3
+## Experiment 3 - number of hidden layer neurons = 3
 
 
 ```python
@@ -588,7 +590,7 @@ neural_network3.train()
 ![png](imgplt/output_42_1.png)
 
 
-## Experiment 4 - number of hidden layer nodes = 2
+## Experiment 4 - number of hidden layer neurons = 2
 
 
 ```python
@@ -626,7 +628,7 @@ neural_network3.train()
 ![png](imgplt/output_44_1.png)
 
 
-## Experiment 5 - number of hidden layer nodes = 1
+## Experiment 5 - number of hidden layer neurons = 1
 
 
 ```python
