@@ -6,3 +6,7 @@
 
 **Deep Deterministic Policy Gradient**
 **DDPG - Flatlands**
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=4Ld9ZXWMFBg
+" target="_blank"><img src="http://img.youtube.com/vi/4Ld9ZXWMFBg/0.jpg" 
+alt="DDPG" width="480" height="240" border="5" /></a>
