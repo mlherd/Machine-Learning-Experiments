@@ -7,6 +7,9 @@
 **Deep Deterministic Policy Gradient**
 **DDPG - Flatlands**
 
+# Project Presentation
+https://github.com/mlherd/Machine-Learning-Experiments/blob/master/DDPG/Final_Presentation.pdf
+
 # Video
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=4Ld9ZXWMFBg
 " target="_blank"><img src="http://img.youtube.com/vi/4Ld9ZXWMFBg/0.jpg" 
