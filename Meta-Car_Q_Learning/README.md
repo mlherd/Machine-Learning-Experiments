@@ -1,6 +1,13 @@
-![alt text](https://github.com/mlherd/Machine-Learning-Experiments/blob/master/Meta-Car_Q_Learning/metacar.png)
+
 
 ```python
+#Husnu Melih Erdogan
+#2019, July
+#Q Learning Using Meta-Car Simulator
+#Meta-Car Project
+#https://www.metacar-project.com/
+# Meta-Car Python Wrapper
+# https://github.com/AI-Guru/gym-metacar
 import sys
 import gym
 import random
@@ -24,6 +31,21 @@ env.enable_webrenderer()
 # reset environment to a new, random state
 env.reset()
 
+# create a q table
+# observation space is 5x5 matrix
+# each item in it can have 3 different values 
+# -1:grass (in my case 2:grass) 1:car 0:road
+
+# Ex lidar reading
+# 2,2,2,2,2
+# 2,3,3,3,2
+# 2,2,2,2,2
+# 0,0,0,0,1
+# 0,0,1,1,2
+# state = 2222 + 23332 + 2222 + 1 + 112 
+
+# Create Q table
+# I reduced the action space from 5 to 3
 Q = np.zeros([111110,3])
 
 # define training hyper-parameters
@@ -32,7 +54,7 @@ lr = 0.1
 discount = 0.9
 epsilon = 0.8
 
-# lists for rewards
+# lists for rewards and plots
 reward_list = []
 avg_reward_list = []
 total_distance = []
@@ -54,6 +76,8 @@ for episode in range(episode_number):
     env.reset()
     terminate = False
     step = 0
+    # each epsidoe can take max 1000 steps
+    # it terminates if the car crashes or gets out of the road
     for step in range (0, 1000):
         observation, reward, done, _= env.step(4)
         env.render()
@@ -92,7 +116,7 @@ for episode in range(episode_number):
         lidar_sums = np.sum(lidar, axis=1)
         new_state = getState(lidar_sums)
         
-        #Calculate Q the new value and update the Q table
+        #Calculate the new Q value and update the Q table
         delta = Q[state, action] + lr*(reward + (discount * np.max(Q[new_state, :])) - Q[state, action])
         Q[state, action] = Q[state, action] + delta
         state = new_state
@@ -116,6 +140,22 @@ env.close()
 ```
 
 
+    ---------------------------------------------------------------------------
+
+    ModuleNotFoundError                       Traceback (most recent call last)
+
+    <ipython-input-1-4211d4c4b408> in <module>
+          7 # https://github.com/AI-Guru/gym-metacar
+          8 import sys
+    ----> 9 import gym
+         10 import random
+         11 try:
+    
+
+    ModuleNotFoundError: No module named 'gym'
+
+
+
 ```python
 # save the q table
 import pickle
@@ -130,6 +170,8 @@ export_csv = df.to_csv (r'export_dataframe.csv', index = None, header=True)
 
 
 ```python
+#testing 
+#without training or changing any values in the Q table
 env.reset()
 for i in range(0,10):
     env.reset()
