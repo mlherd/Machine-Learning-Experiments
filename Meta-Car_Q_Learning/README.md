@@ -66,9 +66,6 @@ reduction = (epsilon)/episode_number
 def getState(ls):
     return ls[0]*10000+ls[1]*1000+ls[2]*100+ls[3]*10+ls[4]
 
-# stop and read initial lidar
-# caculate initial state
-
 for episode in range(episode_number):
     #initilize the parameters for new episode
     total_reward = 0
@@ -79,6 +76,8 @@ for episode in range(episode_number):
     # each epsidoe can take max 1000 steps
     # it terminates if the car crashes or gets out of the road
     for step in range (0, 1000):
+        # stop and read initial lidar
+        # caculate current state
         observation, reward, done, _= env.step(4)
         env.render()
         lidar = observation["lidar"]
@@ -87,9 +86,12 @@ for episode in range(episode_number):
         lidar_sums = np.sum(lidar, axis=1)
         state = getState(lidar_sums)
         
-        # epsilon greedy
+        
+        # move the car forward for first three states
+        # by doing this I try to help the agent learn the desired behaviour
         if episode<3:
             action = 0 
+        # epsilon greedy
         elif np.random.random() < 1 - epsilon:
             action = np.argmax(Q[state, :]) 
         else:
@@ -128,6 +130,7 @@ for episode in range(episode_number):
         
         step = step + 1
     
+    # reduce the probility of randomness in action picking
     if epsilon > 0:
         epsilon = epsilon - reduction
     
@@ -138,22 +141,6 @@ for episode in range(episode_number):
 print (total_reward)
 env.close()
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    ModuleNotFoundError                       Traceback (most recent call last)
-
-    <ipython-input-1-4211d4c4b408> in <module>
-          7 # https://github.com/AI-Guru/gym-metacar
-          8 import sys
-    ----> 9 import gym
-         10 import random
-         11 try:
-    
-
-    ModuleNotFoundError: No module named 'gym'
-
 
 
 ```python
