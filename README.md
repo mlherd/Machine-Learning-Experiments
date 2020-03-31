@@ -6,9 +6,9 @@ Machine Learning Experiments
     - |__ Linear Regression
   - |__ Classification
     - |__ Logistic Regression
-    - |__ Feedforward_Neural_Network
   - |__ Neural Networks and Deep Learning
     - |__ Multilayer_Perceptron
+    - |__ Feedforward_Neural_Network
     - |__ Convolutional_Neural_Network
     - |__ Recursive_Neural_Network
   
