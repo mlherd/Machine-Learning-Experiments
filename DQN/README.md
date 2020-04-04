@@ -1,9 +1,10 @@
 ## Dependencies
-Python 3
-Kivy
-Pytorch
-Numpy
-Matplotlib
+
+- Python 3
+- Kivy
+- Pytorch
+- Numpy
+- Matplotlib
 
 *I used the simple self driving car enviroment from Artificial Intelligence A-Z online course.
 
@@ -11,9 +12,9 @@ Matplotlib
 
 - open a new terminal
   - type
-    - '''cd Machine-Learning-Experiments/DQN'''
+    - ```cd Machine-Learning-Experiments/DQN```
   - run 
-    - '''python enviroment'''
+    - ```python enviroment```
 
 
 ### Examples:
