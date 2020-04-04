@@ -1,3 +1,8 @@
+Project Video Link: https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6650842687308206080
+
+![Alt Text](setup_image.png)
+
+
 ```python
 # Copyright (c) 2020, Husnu Melih Erdogan
 #
