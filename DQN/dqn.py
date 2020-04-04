@@ -1,3 +1,4 @@
+# import libraries
 import numpy as np
 import random
 import os
@@ -7,6 +8,9 @@ import torch.optim as optim
 import torch.autograd as autograd
 from torch.autograd import Variable
 
+# DQN Model takes state information from the enviroment
+# It outputs Q Values for the each action
+# The same network is used to calculate Q' Values (Target)
 class DQNModel(nn.Module):
     
     def __init__(self, state_number, hidden_number, action_number, activation_type="relu"):
@@ -27,10 +31,10 @@ class DQNModel(nn.Module):
             self.relu = nn.ReLU()
         
         # Fully connected layer between input and hidden layer
-        self.fc1 = nn.Linear(self.state_number, 30)
+        self.fc1 = nn.Linear(self.state_number, self.hidden_number)
         
         # Fully connected layer between hidden and output layer
-        self.fc2 = nn.Linear(30, self.action_number)
+        self.fc2 = nn.Linear(self.hidden_number, self.action_number)
         
     def forward(self, states):
         
@@ -49,7 +53,9 @@ class DQNModel(nn.Module):
         q_values = self.fc2(out)
         
         return q_values
-    
+
+# Replay buffer is used to store experiences
+# We sample a batch form the buffer
 class ReplayBuffer(object):
     
     def __init__(self, buffer_size):
@@ -57,11 +63,11 @@ class ReplayBuffer(object):
         self.buffer_size = buffer_size
         self.buffer = []
         
-    def push(self, event):
+    def push(self, experience):
         
-        # add events to the buffer
-        # event = state, new state, action, reward
-        self.buffer.append(event)
+        # add experiences to the buffer
+        # experience = state, new state, action, reward
+        self.buffer.append(experience)
         
         # if buffer is full delete the first item in the buffer
         if (len(self.buffer) > self.buffer_size):
@@ -69,11 +75,11 @@ class ReplayBuffer(object):
 
     def sample(self, batch_size):
         
-        # randomly sample a batch of events from the buffer
+        # randomly sample a batch of experiences from the buffer
         # samples = (state1, state2, ..)(new_state1, new_state2, ..)(action1, action2, ..)(reward1, reward2, ..)
         batch = zip(*random.sample(self.buffer, batch_size))
         
-        # make batch pytorch variable
+        # convert batch a pytorch variable
         return map(lambda x: Variable(torch.cat(x, 0)), batch)
 
 class DQN():
@@ -83,8 +89,8 @@ class DQN():
         # set hyper-parameters
         self.gamma = gamma
         self.learning_rate = learning_rate
-        self.temperature = temperature;
-        self.buffer_size = buffer_size;
+        self.temperature = temperature
+        self.buffer_size = buffer_size
         self.window_size = window_size
         
         # create a list for the reward window 
