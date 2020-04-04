@@ -20,4 +20,5 @@ Machine Learning Experiments
   - |__ Model-Free RL
     - |__ Q Learning
     - |__ Deep_Q_Learning
+      - |__ DQN
       - |__ DDPG
