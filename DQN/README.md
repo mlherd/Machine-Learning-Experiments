@@ -1,5 +1,3 @@
-## Used Artificial Intelligence A-Z online course example simple self driving car enviroment.
-
 ## Dependencies
 Python 3
 Kivy
@@ -7,6 +5,7 @@ Pytorch
 Numpy
 Matplotlib
 
+*I used the simple self driving car enviroment from Artificial Intelligence A-Z online course.
 
 ### Usage:
 
