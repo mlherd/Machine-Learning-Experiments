@@ -1,7 +1,12 @@
 Project Video Link: https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6650842687308206080
 
-![Alt Text](setup_image.png)
+## Project Setup
 
+<img src="setup_image.png" alt="" width="600" height="400">
+
+## Example
+
+![Alt Text](ex.gif)
 
 ```python
 # Copyright (c) 2020, Husnu Melih Erdogan
