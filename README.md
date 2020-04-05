@@ -7,10 +7,10 @@ Machine Learning Experiments
   - |__ Classification
     - |__ Logistic Regression
   - |__ Neural Networks and Deep Learning
-    - |__ Multilayer_Perceptron
-    - |__ Feedforward_Neural_Network
-    - |__ Convolutional_Neural_Network
-    - |__ Recursive_Neural_Network
+    - |__ Multilayer Perceptron
+    - |__ Feedforward Neural Network
+    - |__ Convolutional Neural Network
+    - |__ Recursive Neural Network
     - |__ Long Short-Term Memory
   
 - Unsupervised_Learning
@@ -20,6 +20,6 @@ Machine Learning Experiments
 - Reinforcement_Learning
   - |__ Model-Free RL
     - |__ Q Learning
-    - |__ Deep_Q_Learning
+    - |__ Deep Q Learning
       - |__ DQN
       - |__ DDPG
