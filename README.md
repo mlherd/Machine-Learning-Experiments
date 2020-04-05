@@ -11,6 +11,7 @@ Machine Learning Experiments
     - |__ Feedforward_Neural_Network
     - |__ Convolutional_Neural_Network
     - |__ Recursive_Neural_Network
+    - |__ Long Short-Term Memory
   
 - Unsupervised_Learning
   - |__ Clustering
