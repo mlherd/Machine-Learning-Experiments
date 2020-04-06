@@ -1,5 +1,5 @@
 # Machine-Learning-Experiments
-Machine Learning Experiments
+This repository is a collection fo Machine Learning applications that I have implemented and used in projects.
   
 - Supervised_Learning
   - |__ Regression
