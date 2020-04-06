@@ -1,5 +1,5 @@
 # Machine-Learning-Experiments
-This repository is a collection fo Machine Learning applications that I have implemented and used in projects.
+This repository is a collection fo Machine Learning applications that I have implemented and used in my projects. I use Juypter Notebook for coding and project documentation.
   
 - Supervised_Learning
   - |__ Regression
