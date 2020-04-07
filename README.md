@@ -10,8 +10,9 @@ This repository is a collection fo Machine Learning applications that I have imp
     - |__ Multilayer Perceptron
     - |__ Feedforward Neural Network
     - |__ Convolutional Neural Network
-    - |__ Recursive Neural Network
-    - |__ Long Short-Term Memory
+    - |__ Squence Models
+      - |__ Recursive Neural Network
+      - |__ Long Short-Term Memory
   
 - Unsupervised_Learning
   - |__ Clustering
